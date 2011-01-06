@@ -4,6 +4,3 @@
        :features smex
        :after (lambda ()
                 (smex-initialize)))
-
-
-
