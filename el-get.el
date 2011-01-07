@@ -709,17 +709,23 @@ found."
 (defun el-get-git-pull (package url post-update-fun)
   "git pull the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((git-executable (el-get-executable-find "git"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*git pull %s*" package))
 	 (ok   (format "Pulled package %s." package))
 	 (ko   (format "Could not update package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((git-executable (el-get-git-executable))
          (pdir (el-get-package-directory package))
          (name (format "*git pull %s*" package))
          (ok   (format "Pulled package %s." package))
          (ko   (format "Could not update package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -747,15 +753,21 @@ found."
 (defun el-get-git-svn-clone (package url post-install-fun)
   "Clone the given svn PACKAGE following the URL using git."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let ((git-executable (el-get-executable-find "git"))
 	(name (format "*git svn clone %s*" package))
 	(ok   (format "Package %s installed." package))
 	(ko   (format "Could not install package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let ((git-executable (el-get-git-executable))
         (name (format "*git svn clone %s*" package))
         (ok   (format "Package %s installed." package))
         (ko   (format "Could not install package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -772,6 +784,7 @@ found."
 (defun el-get-git-svn-update (package url post-update-fun)
   "Update PACKAGE using git-svn. URL is given for compatibility reasons."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let ((git-executable (el-get-executable-find "git"))
 	(pdir   (el-get-package-directory package))
 	(f-name (format "*git svn fetch %s*" package))
@@ -781,6 +794,8 @@ found."
 	(r-ok   (format "Rebased package %s." package))
 	(r-ko   (format "Could not rebase package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let ((git-executable (el-get-git-executable))
         (pdir   (el-get-package-directory package))
         (f-name (format "*git svn fetch %s*" package))
@@ -789,6 +804,9 @@ found."
         (r-name (format "*git svn rebase %s*" package))
         (r-ok   (format "Rebased package %s." package))
         (r-ko   (format "Could not rebase package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -817,15 +835,21 @@ found."
 (defun el-get-bzr-branch (package url post-install-fun)
   "Branch a given bzr PACKAGE following the URL using bzr."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((bzr-executable (el-get-executable-find "bzr"))
 	 (name (format "*bzr branch %s*" package))
 	 (ok   (format "Package %s installed" package))
 	 (ko   (format "Could not install package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((bzr-executable "bzr")
          (name (format "*bzr branch %s*" package))
          (ok   (format "Package %s installed" package))
          (ko   (format "Could not install package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
     (el-get-start-process-list
      package
@@ -841,17 +865,23 @@ found."
 (defun el-get-bzr-pull (package url post-update-fun)
   "bzr pull the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((bzr-executable (el-get-executable-find "bzr"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*bzr pull %s*" package))
 	 (ok   (format "Pulled package %s." package))
 	 (ko   (format "Could not update package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((bzr-executable "bzr")
          (pdir (el-get-package-directory package))
          (name (format "*bzr pull %s*" package))
          (ok   (format "Pulled package %s." package))
          (ko   (format "Could not update package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -872,17 +902,23 @@ found."
 (defun el-get-svn-checkout (package url post-install-fun)
   "svn checkout the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((svn-executable (el-get-executable-find "svn"))
 	 (source  (el-get-package-def package))
 	 (name    (format "*svn checkout %s*" package))
 	 (ok      (format "Checked out package %s." package))
 	 (ko      (format "Could not checkout package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((svn-executable el-get-svn)
          (source  (el-get-package-def package))
          (name    (format "*svn checkout %s*" package))
          (ok      (format "Checked out package %s." package))
          (ko      (format "Could not checkout package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -899,17 +935,23 @@ found."
 (defun el-get-svn-update (package url post-update-fun)
   "update the package using svn."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((svn-executable (el-get-executable-find "svn"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*svn update %s*" package))
 	 (ok   (format "Updated package %s." package))
 	 (ko   (format "Could not update package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((svn-executable el-get-svn)
          (pdir (el-get-package-directory package))
          (name (format "*svn update %s*" package))
          (ok   (format "Updated package %s." package))
          (ko   (format "Could not update package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -930,6 +972,7 @@ found."
 (defun el-get-cvs-checkout (package url post-install-fun)
   "cvs checkout the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((cvs-executable (el-get-executable-find "cvs"))
 	 (source  (el-get-package-def package))
 	 (module  (plist-get source :module))
@@ -938,6 +981,8 @@ found."
 	 (ok      (format "Checked out package %s." package))
 	 (ko      (format "Could not checkout package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((cvs-executable (executable-find "cvs"))
          (source  (el-get-package-def package))
          (module  (plist-get source :module))
@@ -945,6 +990,9 @@ found."
          (name    (format "*cvs checkout %s*" package))
          (ok      (format "Checked out package %s." package))
          (ko      (format "Could not checkout package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     ;; (message "%S" `(:args ("-d" ,url "checkout" "-d" ,package ,module)))
@@ -974,17 +1022,23 @@ found."
 (defun el-get-cvs-update (package url post-update-fun)
   "cvs checkout the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((cvs-executable (el-get-executable-find "cvs"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*cvs update %s*" package))
 	 (ok   (format "Updated package %s." package))
 	 (ko   (format "Could not update package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((cvs-executable (executable-find "cvs"))
          (pdir (el-get-package-directory package))
          (name (format "*cvs update %s*" package))
          (ok   (format "Updated package %s." package))
          (ko   (format "Could not update package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -1013,15 +1067,21 @@ found."
 (defun el-get-darcs-get (package url post-install-fun)
   "Get a given PACKAGE following the URL using darcs."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((darcs-executable (el-get-executable-find "darcs"))
 	 (name (format "*darcs get %s*" package))
 	 (ok   (format "Package %s installed" package))
 	 (ko   (format "Could not install package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((darcs-executable (el-get-darcs-executable))
          (name (format "*darcs get %s*" package))
          (ok   (format "Package %s installed" package))
          (ko   (format "Could not install package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
     (el-get-start-process-list
      package
@@ -1037,17 +1097,23 @@ found."
 (defun el-get-darcs-pull (package url post-update-fun)
   "darcs pull the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((darcs-executable (el-get-executable-find "darcs"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*darcs pull %s*" package))
 	 (ok   (format "Pulled package %s." package))
 	 (ko   (format "Could not update package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((darcs-executable (el-get-darcs-executable))
          (pdir (el-get-package-directory package))
          (name (format "*darcs pull %s*" package))
          (ok   (format "Pulled package %s." package))
          (ko   (format "Could not update package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -1302,16 +1368,22 @@ PACKAGE isn't currently installed by ELPA."
   "Callback function for `url-retrieve', store the emacs lisp file for the package."
   (let* ((pdir   (el-get-package-directory package))
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 (dest   (or dest (concat (file-name-as-directory pdir) package ".el")))
 	 (part   (concat dest ".part"))
 	 (el-get-sources (if sources sources el-get-sources))
 	 (buffer-file-coding-system 'no-conversion)
 	 (require-final-newline nil))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
          (dest   (or dest (concat (file-name-as-directory pdir) package ".el")))
          (part   (concat dest ".part"))
          (el-get-sources (if sources sources el-get-sources))
          (require-final-newline nil))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
     ;; prune HTTP headers before save
     (goto-char (point-min))
@@ -1460,17 +1532,23 @@ the files up."
 (defun el-get-hg-clone (package url post-install-fun)
   "Clone the given package following the URL."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((hg-executable (el-get-executable-find "hg"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*hg clone %s*" package))
 	 (ok   (format "Package %s installed." package))
 	 (ko   (format "Could not install package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((hg-executable "hg")
          (pdir (el-get-package-directory package))
          (name (format "*hg clone %s*" package))
          (ok   (format "Package %s installed." package))
          (ko   (format "Could not install package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -1487,17 +1565,23 @@ the files up."
 (defun el-get-hg-pull (package url post-update-fun)
   "hg pull the package."
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let* ((hg-executable (el-get-executable-find "hg"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*hg pull %s*" package))
 	 (ok   (format "Pulled package %s." package))
 	 (ko   (format "Could not update package %s." package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
   (let* ((hg-executable "hg")
          (pdir (el-get-package-directory package))
          (name (format "*hg pull %s*" package))
          (ok   (format "Pulled package %s." package))
          (ko   (format "Could not update package %s." package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
@@ -1560,6 +1644,7 @@ the files up."
                                infodir-abs-conf
                              (file-name-directory infodir-abs-conf))))
 <<<<<<< HEAD
+<<<<<<< HEAD
 	     (infodir-rel (if (file-directory-p infodir-abs-conf)
 			      infodir
 			    (file-name-directory infodir)))
@@ -1592,6 +1677,8 @@ the files up."
 	   (error
 	    "el-get-install-or-init-info: %s not supported" build-or-init)))))))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
              (infodir-rel (if (file-directory-p infodir-abs-conf)
                               infodir
                             (file-name-directory infodir)))
@@ -1623,6 +1710,7 @@ the files up."
           (t
            (error
             "el-get-install-or-init-info: %s not supported" build-or-init)))))))
+<<<<<<< HEAD
 >>>>>>> first, naive version of el-get-update-all function
 
 (defun el-get-byte-compile-file (el)
@@ -1695,6 +1783,8 @@ names from `el-get-package-directory'"
       ;; now that we have the list
       (when files
 	(apply 'el-get-byte-compile-files package (nreverse files))))))
+=======
+>>>>>>> first, naive version of el-get-update-all function
 
 (defun el-get-build-commands (package)
   "Return a list of build commands for the named PACKAGE.
@@ -1752,6 +1842,7 @@ recursion.
 "
   (let* ((pdir   (el-get-package-directory package))
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 (wdir   (if subdir (concat (file-name-as-directory pdir) subdir) pdir))
 	 (buf    (format "*el-get-build: %s*" package))
 	 (source (el-get-package-def package))
@@ -1771,12 +1862,18 @@ recursion.
          (buf    (format "*el-get-build: %s*" package))
          (default-directory wdir))
 >>>>>>> first, naive version of el-get-update-all function
+=======
+         (wdir   (if subdir (concat (file-name-as-directory pdir) subdir) pdir))
+         (buf    (format "*el-get-build: %s*" package))
+         (default-directory wdir))
+>>>>>>> first, naive version of el-get-update-all function
 
     ;; first build the Info dir
     (unless installing-info
       (el-get-install-or-init-info package 'build))
 
     (if sync
+<<<<<<< HEAD
 <<<<<<< HEAD
 	(progn
 	  ;; first byte-compile the package, with another "clean" emacs process
@@ -1788,10 +1885,15 @@ recursion.
         (progn
           (dolist (c commands)
 >>>>>>> first, naive version of el-get-update-all function
+=======
+        (progn
+          (dolist (c commands)
+>>>>>>> first, naive version of el-get-update-all function
             (let ((cmd
                    (if (stringp c) c
                      (mapconcat 'shell-quote-argument c " "))))
               (message "%S" (shell-command-to-string cmd))))
+<<<<<<< HEAD
 <<<<<<< HEAD
 	  (when (and post-build-fun (functionp post-build-fun))
 	    (funcall post-build-fun package)))
@@ -1831,6 +1933,8 @@ recursion.
 		      process-list)))
 	(el-get-start-process-list package full-process-list post-build-fun)))))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
           (when (and post-build-fun (functionp post-build-fun))
             (funcall post-build-fun)))
 
@@ -1856,6 +1960,9 @@ recursion.
                                                   "el-get could not build %s [%s]" package c))))
                      commands)))
         (el-get-start-process-list package process-list post-build-fun)))))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
 
@@ -2172,6 +2279,7 @@ package is not listed in `el-get-sources'"
   (unless noerror (el-get-error-unless-package-p package))
   (let* ((source   (el-get-package-def package))
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 (method   (plist-get source :type))
 	 (loads    (plist-get source :load))
 	 (feats    (plist-get source :features))
@@ -2180,6 +2288,8 @@ package is not listed in `el-get-sources'"
 	 (before   (plist-get source :before))
 	 (pdir     (el-get-package-directory package)))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
          (method   (plist-get source :type))
          (loads    (plist-get source :load))
          (feats    (plist-get source :features))
@@ -2189,6 +2299,9 @@ package is not listed in `el-get-sources'"
          (after    (plist-get source :after))
          (before   (plist-get source :before))
          (pdir     (el-get-package-directory package)))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
 
     ;; append entries to load-path and Info-directory-list
@@ -2324,6 +2437,7 @@ from `el-get-sources'.
   "Post update PACKAGE. This will get run by a sentinel."
   (let* ((source   (el-get-package-def package))
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 (commands (el-get-build-commands package)))
     (el-get-build package commands nil el-get-default-process-sync
 		  (lambda (package)
@@ -2332,6 +2446,8 @@ from `el-get-sources'.
 		    (when (string= (el-get-read-package-status package) "required")
 		      (el-get-save-package-status package "installed"))
 =======
+=======
+>>>>>>> first, naive version of el-get-update-all function
          (commands (el-get-build-commands package)))
     (el-get-build package commands nil nil
                   (lambda (package)
@@ -2339,6 +2455,9 @@ from `el-get-sources'.
                     ;; fix trailing failed installs
                     (when (string= (el-get-read-package-status package) "required")
                       (el-get-save-package-status package "installed"))
+<<<<<<< HEAD
+>>>>>>> first, naive version of el-get-update-all function
+=======
 >>>>>>> first, naive version of el-get-update-all function
                     (run-hook-with-args 'el-get-post-update-hooks package)))))
 
