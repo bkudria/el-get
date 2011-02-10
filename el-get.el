@@ -708,25 +708,11 @@ found."
 
 (defun el-get-git-pull (package url post-update-fun)
   "git pull the package."
-<<<<<<< HEAD
-<<<<<<< HEAD
   (let* ((git-executable (el-get-executable-find "git"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*git pull %s*" package))
 	 (ok   (format "Pulled package %s." package))
 	 (ko   (format "Could not update package %s." package)))
-=======
-=======
->>>>>>> first, naive version of el-get-update-all function
-  (let* ((git-executable (el-get-git-executable))
-         (pdir (el-get-package-directory package))
-         (name (format "*git pull %s*" package))
-         (ok   (format "Pulled package %s." package))
-         (ko   (format "Could not update package %s." package)))
-<<<<<<< HEAD
->>>>>>> first, naive version of el-get-update-all function
-=======
->>>>>>> first, naive version of el-get-update-all function
 
     (el-get-start-process-list
      package
@@ -754,6 +740,9 @@ found."
   "Clone the given svn PACKAGE following the URL using git."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let ((git-executable (el-get-executable-find "git"))
 	(name (format "*git svn clone %s*" package))
 	(ok   (format "Package %s installed." package))
@@ -785,6 +774,9 @@ found."
   "Update PACKAGE using git-svn. URL is given for compatibility reasons."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let ((git-executable (el-get-executable-find "git"))
 	(pdir   (el-get-package-directory package))
 	(f-name (format "*git svn fetch %s*" package))
@@ -836,6 +828,9 @@ found."
   "Branch a given bzr PACKAGE following the URL using bzr."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((bzr-executable (el-get-executable-find "bzr"))
 	 (name (format "*bzr branch %s*" package))
 	 (ok   (format "Package %s installed" package))
@@ -866,6 +861,9 @@ found."
   "bzr pull the package."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((bzr-executable (el-get-executable-find "bzr"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*bzr pull %s*" package))
@@ -903,6 +901,9 @@ found."
   "svn checkout the package."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((svn-executable (el-get-executable-find "svn"))
 	 (source  (el-get-package-def package))
 	 (name    (format "*svn checkout %s*" package))
@@ -936,6 +937,9 @@ found."
   "update the package using svn."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((svn-executable (el-get-executable-find "svn"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*svn update %s*" package))
@@ -973,6 +977,9 @@ found."
   "cvs checkout the package."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((cvs-executable (el-get-executable-find "cvs"))
 	 (source  (el-get-package-def package))
 	 (module  (plist-get source :module))
@@ -1023,6 +1030,9 @@ found."
   "cvs checkout the package."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((cvs-executable (el-get-executable-find "cvs"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*cvs update %s*" package))
@@ -1068,6 +1078,9 @@ found."
   "Get a given PACKAGE following the URL using darcs."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((darcs-executable (el-get-executable-find "darcs"))
 	 (name (format "*darcs get %s*" package))
 	 (ok   (format "Package %s installed" package))
@@ -1098,6 +1111,9 @@ found."
   "darcs pull the package."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((darcs-executable (el-get-executable-find "darcs"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*darcs pull %s*" package))
@@ -1533,6 +1549,9 @@ the files up."
   "Clone the given package following the URL."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((hg-executable (el-get-executable-find "hg"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*hg clone %s*" package))
@@ -1566,6 +1585,9 @@ the files up."
   "hg pull the package."
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((hg-executable (el-get-executable-find "hg"))
 	 (pdir (el-get-package-directory package))
 	 (name (format "*hg pull %s*" package))
@@ -1602,6 +1624,9 @@ the files up."
 (defun el-get-rmdir (package url post-remove-fun)
   "Just rm -rf the package directory. Follow symlinks."
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (let* ((source   (el-get-package-def package))
 	 (method   (plist-get source :type))
 	 (pdir (el-get-package-directory package)))
@@ -1614,6 +1639,7 @@ the files up."
 	  (dired-delete-file pdir 'always)
 	(message "el-get could not find package directory \"%s\"" pdir))
       (funcall post-remove-fun package))))
+<<<<<<< HEAD
 =======
   (let ((pdir (el-get-package-directory package)))
     (if (file-exists-p pdir)
@@ -1621,6 +1647,8 @@ the files up."
       (message "el-get could not find package directory \"%s\"" pdir))
     (funcall post-remove-fun package)))
 >>>>>>> first, naive version of el-get-update-all function
+=======
+>>>>>>> dimitri/master
 
 (defun el-get-set-info-path (package infodir-rel)
   (require 'info)
@@ -1786,6 +1814,77 @@ names from `el-get-package-directory'"
 =======
 >>>>>>> first, naive version of el-get-update-all function
 
+(defun el-get-byte-compile-file (el)
+  "byte-compile-file does that unconditionnaly, here we want to
+avoid doing it all over again"
+  (let ((elc (concat (file-name-sans-extension el) ".elc")))
+    (when (or (not (file-exists-p elc))
+	      (file-newer-than-file-p el elc))
+      (condition-case err
+	  (byte-compile-file el)
+	((debug error) ;; catch-all, allow for debugging
+	 (message "%S" (error-message-string err)))))))
+
+(defun el-get-byte-compile-files (package &rest files)
+  "byte-compile the files or directories FILES.
+
+FILES files will get byte compiled if there's no .elc or the
+source is newer, FILES directories will be handled by means of
+`byte-recompile-directory' and if any FILES element is neither a
+file nor a directories it's considered as a regexp over file
+names from `el-get-package-directory'"
+  (let ((byte-compile-warnings nil))
+    (dolist (fp files)
+      (cond
+       ((file-directory-p fp)
+	(byte-recompile-directory fp 0))
+
+       ((file-exists-p fp)
+	(el-get-byte-compile-file fp))
+
+       (t ; regexp case
+	(dolist (file (directory-files pdir nil fp))
+	  (el-get-byte-compile-file (concat pdir file))))))))
+
+(defun el-get-byte-compile (&optional package nocomp compile)
+  "byte-compile PACKAGE files, unless variable `el-get-byte-compile' is nil"
+  (when el-get-byte-compile
+    (let* ((package  (or package (car command-line-args-left)))
+	   (source   (el-get-package-def package))
+	   (method   (plist-get source :type))
+	   (pdir     (el-get-package-directory package))
+	   (el-path  (el-get-load-path package))
+	   ;; when using command-line-args-left, we did not load the user's
+	   ;; `el-get-sources', so we get :compile from the command line too
+	   (nocomp
+	    (or nocomp (car (read-from-string (cadr command-line-args-left)))))
+	   (compile
+	    (or compile
+		(car (read-from-string (caddr command-line-args-left)))))
+	   files)
+      ;; byte-compile either :compile entries or anything in load-path
+      (if compile
+	  ;; only byte-compile what's in the :compile property of the recipe
+	  ;; gotcha: read-from-string will get back symbolp when there's
+	  ;; only one element in the list
+	  (dolist (path (if (listp compile) compile
+			  (list (symbol-name compile))))
+	    (let ((fullpath (expand-file-name path pdir)))
+	      ;; path could be a file name regexp
+	      (push (if (file-exists-p fullpath) fullpath path) files)))
+
+	;; Compile that directory, unless users asked not to (:compile nil)
+	;; or unless we have build instructions (then they should care)
+	;; or unless we have installed pre-compiled package
+	(unless (or nocomp
+		    (el-get-build-commands package)
+		    (member method '(apt-get fink pacman)))
+	  (dolist (dir el-path)
+	    (push dir files))))
+      ;; now that we have the list
+      (when files
+	(apply 'el-get-byte-compile-files package (nreverse files))))))
+
 (defun el-get-build-commands (package)
   "Return a list of build commands for the named PACKAGE.
 
@@ -1826,6 +1925,16 @@ absolute filename obtained with expand-file-name is executable."
 COMMANDS is a list of commands to run in order to build the
 package.
 
+<<<<<<< HEAD
+=======
+(defun el-get-build
+  (package commands &optional subdir sync post-build-fun installing-info)
+  "Run each command from the package directory.
+
+COMMANDS is a list of commands to run in order to build the
+package.
+
+>>>>>>> dimitri/master
 The commands are run either synchronously or asynchronously
 depending on the SYNC parameter, and can be run from SUBDIR
 directory when given.  By default COMMANDS are run from the
@@ -1857,6 +1966,7 @@ recursion.
 		  (file-name-sans-extension (symbol-file 'el-get-byte-compile 'defun))
 		  package nocomp (prin1-to-string clist)))
 	 (default-directory (file-name-as-directory wdir)))
+<<<<<<< HEAD
 =======
          (wdir   (if subdir (concat (file-name-as-directory pdir) subdir) pdir))
          (buf    (format "*el-get-build: %s*" package))
@@ -1867,6 +1977,8 @@ recursion.
          (buf    (format "*el-get-build: %s*" package))
          (default-directory wdir))
 >>>>>>> first, naive version of el-get-update-all function
+=======
+>>>>>>> dimitri/master
 
     ;; first build the Info dir
     (unless installing-info
@@ -1897,6 +2009,7 @@ recursion.
 <<<<<<< HEAD
 	  (when (and post-build-fun (functionp post-build-fun))
 	    (funcall post-build-fun package)))
+<<<<<<< HEAD
 
       ;; async
       (let* ((process-list
@@ -1964,6 +2077,43 @@ recursion.
 >>>>>>> first, naive version of el-get-update-all function
 =======
 >>>>>>> first, naive version of el-get-update-all function
+=======
+
+      ;; async
+      (let* ((process-list
+	      (mapcar (lambda (c)
+			(let* ((split    (if (stringp c)
+					     (split-string c)
+					   (mapcar 'shell-quote-argument c)))
+			       (c        (mapconcat 'identity split " "))
+			       (name     (car split))
+			       (program  (el-get-build-command-program name))
+			       (args     (cdr split)))
+
+			  `(:command-name ,name
+					  :buffer-name ,buf
+					  :default-directory ,wdir
+					  :shell t
+					  :program ,program
+					  :args (,@args)
+					  :message ,(format "el-get-build %s: %s ok." package c)
+					  :error ,(format
+						   "el-get could not build %s [%s]" package c))))
+		      commands))
+	     (full-process-list ;; includes byte compiling
+	      (append (list
+		       `(:command-name "byte-compile"
+				       :buffer-name ,buf
+				       :default-directory ,wdir
+				       :shell t
+				       :program ,el-get-emacs
+				       :args ,(split-string bytecmdargs)
+				       :message ,(format "el-get-build %s: byte-compile ok." package)
+				       :error ,(format
+						  "el-get could not byte-compile %s" package)))
+		      process-list)))
+	(el-get-start-process-list package full-process-list post-build-fun)))))
+>>>>>>> dimitri/master
 
 
 ;;
@@ -2127,6 +2277,7 @@ that has a valid recipe."
                    (el-get-package-name-list merge-recipes) nil t))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 (defun el-get-byte-compile-file (el)
   "byte-compile the file EL if there's no .elc or the source is newer"
@@ -2136,6 +2287,8 @@ that has a valid recipe."
       (byte-compile-file el))))
 
 >>>>>>> first, naive version of el-get-update-all function
+=======
+>>>>>>> dimitri/master
 (defun el-get-save-and-kill (file)
   "Save and kill all buffers visiting the named FILE"
   (let (buf)
@@ -2204,6 +2357,9 @@ shouldn't be invoked directly."
   "Remove from `el-get-autoload-file' any autoloads associated
 with the named PACKAGE"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dimitri/master
   (when (file-exists-p el-get-autoload-file)
     (with-temp-buffer ;; empty buffer to trick `autoload-find-destination'
       (let ((generated-autoload-file el-get-autoload-file)
@@ -2217,6 +2373,7 @@ with the named PACKAGE"
                   (autoload-find-destination f (autoload-file-load-name f))
                 (autoload-find-destination f)))))))
     (el-get-save-and-kill el-get-autoload-file)))
+<<<<<<< HEAD
 =======
   (with-temp-buffer ;; empty buffer to trick `autoload-find-destination'
     (let ((generated-autoload-file el-get-autoload-file)
@@ -2231,6 +2388,8 @@ with the named PACKAGE"
               (autoload-find-destination f)))))))
   (el-get-save-and-kill el-get-autoload-file))
 >>>>>>> first, naive version of el-get-update-all function
+=======
+>>>>>>> dimitri/master
 
 (defvar el-get-autoload-timer nil
   "Where the currently primed autoload timer (if any) is stored")
@@ -2314,6 +2473,7 @@ package is not listed in `el-get-sources'"
       (el-get-install-or-init-info package 'init))
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     (when el-get-byte-compile
       ;; byte-compile either :compile entries or anything in load-path
@@ -2338,6 +2498,8 @@ package is not listed in `el-get-sources'"
               (byte-recompile-directory dir 0))))))
 
 >>>>>>> first, naive version of el-get-update-all function
+=======
+>>>>>>> dimitri/master
     ;; call the "before" user function
     (when (and before (functionp before))
       (message "el-get: Calling :before function for package %s" package)
